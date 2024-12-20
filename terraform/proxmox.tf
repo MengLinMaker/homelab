@@ -1,13 +1,14 @@
 variable "proxmox_config" {
   description = "Proxmox configuration"
   type = object({
-    endpoint     = string
-    username  = string
+    name     = string
+    endpoint = string
+    username = string
     password = string
   })
 }
 
-provider "proxmox" {  
+provider "proxmox" {
   endpoint = var.proxmox_config.endpoint
   username = var.proxmox_config.username
   password = var.proxmox_config.password

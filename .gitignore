@@ -1,6 +1,8 @@
 # Terraform
 .terraform
 *.tfvars
+*.tfstate
+*.tfstate.backup
 
 # Node
 node_modules
