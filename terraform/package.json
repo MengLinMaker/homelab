@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "preinstall": "terraform init",
+    "format": "terraform fmt --recursive"
+  }
+}
