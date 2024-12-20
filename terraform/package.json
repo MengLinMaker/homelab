@@ -2,6 +2,7 @@
   "scripts": {
     "preinstall": "terraform init",
     "format": "terraform fmt --recursive",
-    "lint": "terraform validate && tfsec . --tfvars-file=terraform.tfvars"
+    "lint": "terraform validate && tfsec . --tfvars-file=terraform.tfvars",
+    "deploy": "terraform apply -auto-approve"
   }
 }

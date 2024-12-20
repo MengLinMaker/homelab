@@ -3,7 +3,8 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky",
     "format": "pnpm -r format",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "deploy": "pnpm -r deploy"
   },
   "devDependencies": {
     "husky": "9.1.7"
