@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky",
+    "format": "pnpm -r format"
+  },
+  "devDependencies": {
+    "husky": "9.1.7"
+  }
+}

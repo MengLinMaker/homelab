@@ -1,0 +1,6 @@
+# Terraform
+.terraform
+*.tfvars
+
+# Node
+node_modules
