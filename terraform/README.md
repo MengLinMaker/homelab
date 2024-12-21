@@ -7,12 +7,10 @@ This folder holds all the Terraform scripts for provisioning the VMs.
 brew install terraform tfsec
 pnpm i
 ```
-2. Deploy
+2. Provide env variables:
+  - `terraform login`
+  - Create `terraform.tfvars` according the `variables.tf`
+3. Deploy
 ```bash
 pnpm dep
-```
-
-_Note: may need to login to terraform_
-```bash
-terraform login
 ```
