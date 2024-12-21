@@ -4,7 +4,8 @@ This folder holds all the Terraform scripts for provisioning the VMs. The config
 ## Deployment
 1. Install dependencies
 ```bash
-brew install terraform tfsec
+brew install terraform tfsec siderolabs/tap/talosctl
+
 pnpm i
 ```
 2. Provide env variables:

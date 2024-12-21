@@ -4,7 +4,8 @@ My homelab setup with Dell PowerEdge R730 running Proxmox, Talos and K0s, provis
 ## Quick start
 1. Install dependencies
 ```bash
-brew install terraform tfsec
+brew install terraform tfsec siderolabs/tap/talosctl
+
 pnpm i
 ```
 2. Provide env variables:
