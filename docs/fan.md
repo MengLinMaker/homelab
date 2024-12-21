@@ -18,7 +18,7 @@ Disable manual fan control
 ipmitool raw 0x30 0x30 0x01 0x01
 ```
 
-# Change speed
+## Change speed
 Turn fan to 10% - 0xA is 10
 ```bash
 ipmitool raw 0x30 0x30 0x02 0xff 0xA
@@ -29,6 +29,7 @@ Turn fan to 20% - 0x19 is 20
 ipmitool raw 0x30 0x30 0x02 0xff 0x19
 ```
 
+## Monitor
 Monitor some relevant metrics
 ```bash
 ipmitool sdr elist full
