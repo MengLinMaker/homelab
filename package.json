@@ -4,7 +4,7 @@
     "postinstall": "husky",
     "format": "pnpm -r format",
     "lint": "pnpm -r lint",
-    "deploy": "pnpm -r deploy"
+    "dep": "pnpm -r dep"
   },
   "devDependencies": {
     "husky": "9.1.7"
