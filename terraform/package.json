@@ -4,6 +4,6 @@
     "format": "terraform fmt --recursive",
     "lint": "terraform validate && tfsec . --tfvars-file=terraform.tfvars",
     "plan": "terraform state pull terraform.tfstate && terraform plan",
-    "dep": "terraform state pull terraform.tfstate && terraform apply -auto-approve && terraform state push terraform.tfstate"
+    "dep": "terraform state pull terraform.tfstate && terraform apply -auto-approve && terraform state push terraform.tfstate && terraform output -raw kube_config > ~/.kube/config && terraform output -raw talos_config > ~/.talos/config"
   }
 }
