@@ -1,5 +1,5 @@
 # Terraform
-This folder holds all the Terraform scripts for provisioning the VMs.
+This folder holds all the Terraform scripts for provisioning the VMs. The config is inspired by [this blog](https://olav.ninja/talos-cluster-on-proxmox-with-terraform)
 
 ## Deployment
 1. Install dependencies

@@ -20,3 +20,6 @@ Folder structure:
 - `docs` - helpful commands
 - `kubernetes` - all the kubernetes related configs
 - `terraform` - config for deploying infra on proxmox
+
+## Attribution:
+- Terraform setup inspired by [this blog](https://olav.ninja/talos-cluster-on-proxmox-with-terraform)
