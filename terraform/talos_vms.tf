@@ -5,10 +5,13 @@ resource "proxmox_virtual_environment_vm" "talos_control_plane_vm" {
   node_name   = var.proxmox_config.name
   vm_id       = 800
 
-  on_boot = true
+  bios            = "seabios"
+  machine         = "q35"
+  on_boot         = true
+  stop_on_destroy = true
   cpu {
     cores = 4
-    type  = "x86-64-v2-AES"
+    type  = "host"
   }
   memory {
     dedicated = 4000
@@ -17,14 +20,13 @@ resource "proxmox_virtual_environment_vm" "talos_control_plane_vm" {
   agent {
     enabled = true
   }
-  stop_on_destroy = true
   network_device {
     bridge = "vmbr0"
   }
   disk {
     datastore_id = var.proxmox_config.vm_store_id
     file_id      = proxmox_virtual_environment_download_file.talos_qcow2.id
-    file_format  = "raw"
+    file_format  = "qcow2"
     interface    = "virtio0"
     size         = 10
   }
@@ -53,26 +55,28 @@ resource "proxmox_virtual_environment_vm" "talos_worker_vm" {
   node_name   = var.proxmox_config.name
   vm_id       = 900
 
-  on_boot = true
+  bios            = "seabios"
+  machine         = "q35"
+  on_boot         = true
+  stop_on_destroy = true
   cpu {
-    cores = 12
-    type  = "x86-64-v2-AES"
+    cores = 16
+    type  = "host"
   }
   memory {
-    dedicated = 64000
-    floating  = 64000 # enable memory ballooning
+    dedicated = 32000
+    floating  = 32000 # enable memory ballooning
   }
   agent {
     enabled = true
   }
-  stop_on_destroy = true
   network_device {
     bridge = "vmbr0"
   }
   disk {
     datastore_id = var.proxmox_config.vm_store_id
     file_id      = proxmox_virtual_environment_download_file.talos_qcow2.id
-    file_format  = "raw"
+    file_format  = "qcow2"
     interface    = "virtio0"
     size         = 10
   }

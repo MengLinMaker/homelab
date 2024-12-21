@@ -1,13 +1,3 @@
-variable "talos_cluster_config" {
-  description = "Talos cluster configuration"
-  type = object({
-    name             = string
-    gateway          = string
-    control_plane_ip = string
-    worker_ip        = string
-  })
-}
-
 resource "talos_machine_secrets" "this" {}
 
 data "talos_client_configuration" "this" {
